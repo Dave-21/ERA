@@ -1,0 +1,55 @@
+body {
+    background-color: #888888;
+    color: #a19e98;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+  }
+
+  .content-grid {
+    display: flex;
+    grid-row: span;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  #calendar {
+    display: grid;
+    left: 0;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    max-width: 90%;
+    min-height: 450px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  
+  .day {
+    padding: 10px;
+    text-align: center;
+    background-color: #555;
+  }
+  
+  .day.available {
+    background-color: #36744f;
+  }
+  
+  .day.booked {
+    background-color: #e74c3c;
+  }
+
+  .back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-top: solid transparent;
+    border-right: 50px solid #333;
+    transform: rotate(45deg);
+    z-index: 100;
+  }
+  

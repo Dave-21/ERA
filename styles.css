@@ -1,0 +1,314 @@
+/* styles.css */
+
+body {
+    /*background-color: rgba(61, 62, 63, 0.7);*/
+    background: linear-gradient(to bottom, #607530, #35393b);
+    background-attachment: fixed;
+    animation: seamlessBackground 10s infinite;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: auto;
+  }
+
+.background-image {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: calc(55vh - 50px);
+    background-image: url("C:/Users/david/code/Sites/ERA/src/Front_Page_Background_Cover.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.web-front-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #0e131d;
+    z-index: -1;
+    margin-bottom: 10vh;
+    margin-top: -50px;
+}
+
+.about-background-image {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    margin-right: 15px;
+    width: calc(100% - 5px);
+    height: 400px;
+    background-image: url("C:/Users/david/code/Sites/ERA/src/History.jpg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.the-river-background-image {
+    position: absolute;
+    top: calc(150% + 5px);
+    width: calc(100% - 5px);
+    left: 0;
+    margin-left: 15px;
+    height: 500px;
+    background-image: url('C:/Users/david/code/Sites/ERA/src/The_River.jpg');
+    background-size: contain;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Nav */
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2c2d0d;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin-bottom: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  nav li {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  
+  nav a {
+    color: #f0d885;
+    text-decoration: none;
+  }
+
+nav a:hover {
+    color: rgba(240, 216, 133, 0.4);
+}
+
+/****/
+  
+  h1 {
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #0e131d
+  }
+
+  .content-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 70px;
+    column-gap: 5%;
+    z-index: 1;
+  }
+  
+  .container {
+    width: 15vh;
+    height: 30vh;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #ada691;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+    min-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s, bacground-color 0.3s ease;
+  }.container:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    background-color: rgba(61, 71, 59, 0.35);
+    color: #000000;
+  }
+  
+  .container h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #3e3f3f;
+  }
+  
+  .container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6d6d6d;
+  }
+
+/* Hamburger */
+  .hamburger {
+    position: relative;
+    display: felx;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    height: 20px;
+    padding-left: 6px;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #a19e98;
+    transition: background-colore 0.3s ease;
+  }
+
+ .hamburger.active .line {
+    opacity: 75%;
+    width: 3.5vh;
+    height: 20%;
+ }
+
+ .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(15px, 4px);
+ }
+
+ .hamburger.active .line:nth-child(2) {
+    color: transparent;
+    background-color: transparent;
+ }
+
+ .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, 4px);
+ }
+
+ .hamburger.active {
+    transform: rotate(90deg);
+    margin-left: 10px;
+    margin-top: 5px;
+    /* width: 3.5vh;*/
+  }
+
+  .line {
+    width: 40px;
+    height: 5px;
+    background-color: #a19e98;
+    margin: 4px 0;
+  }
+
+/****/
+
+ /* Flyout List */
+
+ .flyout-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 20%;
+    height: auto;
+    background-color: rgba(204, 209, 206, 0.65);
+    transition: opacity 0.3s ease;
+ }
+
+ .flyout-list li {
+    padding: 8px 16px;
+    transition: transform 0.2s ease, bacground-color 0.2s ease, border-radius 0.5s ease;
+ }
+
+ .flyout-list li:hover {
+    transform: translate(2px);
+    background-color: rgba(161, 158, 152, 0.25);
+    color: #ffffff;
+    border-radius: 7px;
+ }
+
+.flyout-list a {
+    font-family: 'Lato', sans-serif;
+    color: #1e2100;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+ .flyout-list.open {
+    display: block;
+    opacity: 1;
+ }
+
+ /*****/
+
+ /* ScrollBar */
+ ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #bdbdbd;
+ }
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    transition: background-color 2s ease;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+ }
+ /****/
+
+ @keyframes seamlessBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+ }
+
+
+  @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+        flex-direction: column;
+        background-color: #2c2d0d;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul.open li {
+        padding: 5px 20px;
+    }
+  }
+  

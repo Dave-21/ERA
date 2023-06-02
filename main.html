@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Website Title</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+        /* Include the CSS code provided earlier */
+        </style>
+    </head>
+        <body>
+            <nav>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="flyout-list">
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link link</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="background-image"></div>
+
+            <h1 class="web-front-title">Escanaba River Association</h1>
+            <div class="content-wrapper">
+                <div class="container">
+                    <h2>The Escanaba River</h2>
+                    <p>About the Escanaba river.</p>
+                </div>
+                <div id="booking_page" class="container">
+                        <h2>Lodge Booking</h2>
+                        <p>View booked and buy available booking dates.</p>
+                </div>
+                <div class="container">
+                    <h2>ERA History</h2>
+                    <p>History about the ERA, the previous members and founders of the ERA, and information about the river.</p>
+                </div>
+            </div>
+            <div class="about-background-image"></div>
+
+            <div class="the-river-background-image"></div>
+
+            <script>
+                const hamburger = document.querySelector('.hamburger');
+                const flyoutList = document.querySelector('.flyout-list');
+
+                const navUL = document.querySelector('nav ul');
+
+                window.addEventListener('load', function() {
+                    document.body.classList.add('animate-background');
+                });
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navUL.classList.toggle('open');
+                });
+
+                const bookingPageDiv = document.getElementById("booking_page");
+
+                bookingPageDiv.addEventListener('click', function() {
+                    window.location.href = "booking.html";
+                });
+            </script>
+        </body>
+</html>
