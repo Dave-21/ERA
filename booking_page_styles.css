@@ -1,7 +1,13 @@
+::root {
+    --main-bg-color: #888888;
+    --main-font-color: #a19e98;
+    --main-font-family: 'Lato', sans-serif;
+}
+
 body {
-    background-color: #888888;
-    color: #a19e98;
-    font-family: 'Lato', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
     padding: 20px;
   }
 
