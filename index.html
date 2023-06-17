@@ -54,9 +54,9 @@
                 window.addEventListener('load', function() {
                     document.body.classList.add('animate-background');
                 });
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navUL.classList.toggle('open');
+                hamburger.addEventListener('click', function() { 
+                    this.classList.toggle('open');
+                    flyoutList.classList.toggle('open');
                 });
 
                 const bookingPageDiv = document.getElementById("booking_page");
