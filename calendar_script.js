@@ -38,3 +38,79 @@ function generateCalendar() {
 
 // Generate the initial calendar
 generateCalendar();
+
+// Get the form elements
+const loginForm = document.getElementById('loginForm');
+const signupForm = document.getElementById('signupForm');
+const switchToSignupButton = document.getElementById('switchToSignup');
+const switchToSigninButton = document.getElementById('switchToSignin');
+
+// Handle the login form submission
+loginForm.addEventListener('submit', function(event) {
+    // Prevent the form from being submitted normally
+    event.preventDefault();
+
+    // Get the email and password
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Send the email and password to server
+    fetch('/api/login/', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            password: password,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success', data);
+    })
+    .catch((error) => {
+        console.log('Error:', error);
+    })
+});
+
+// Handle the signup form submission
+signupForm.addEventListener('submit', function(event) {
+    // Prevent the form from being submitted normally
+    event.preventDefault();
+
+    // Get the email and password
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    // Send the email and password to your server
+    fetch('/api/signup/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            password: password,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+});
+
+// Handle the switch to signup button click
+switchToSignupButton.addEventListener('click', function() {
+    document.querySelector('.signin-form').style.display = 'none';
+    document.querySelector('.signup-form').style.display = 'block';
+});
+
+// Handle the switch to signin button click
+switchToSigninButton.addEventListener('click', function() {
+    document.querySelector('.signup-form').style.display = 'none';
+    document.querySelector('.signin-form').style.display = 'block';
+});
