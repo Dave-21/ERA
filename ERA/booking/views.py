@@ -1,13 +1,18 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 
 # Create your views here.
 from django.contrib.auth import authenticate, login
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 import json
 
-@csrf_exempt
+def home_view(request):
+    return render(request, 'index.html')
+
+def booking_view(request):
+    return render(request, 'booking.html')
+
 def login_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)
@@ -20,7 +25,6 @@ def login_view(request):
         else:
             return JsonResponse({'status': 'error', 'message': 'Invalid login credentials'})
 
-@csrf_exempt
 def signup_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)

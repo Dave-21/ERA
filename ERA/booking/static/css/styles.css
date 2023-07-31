@@ -24,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     height: calc(55vh - 50px);
-    background-image: url("C:/Users/david/code/Sites/ERA/src/Front_Page_Background_Cover.jpg");
+    background-image: url("/static/images/Front_Page_Background_Cover.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.9;
@@ -51,7 +51,7 @@ body {
     margin-right: 15px;
     width: calc(100% - 5px);
     height: 400px;
-    background-image: url("C:/Users/david/code/Sites/ERA/src/History.jpg");
+    background-image: url("/static/images/History.jpg");
     background-size: contain;
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@ body {
     left: 0;
     margin-left: 15px;
     height: 500px;
-    background-image: url('C:/Users/david/code/Sites/ERA/src/The_River.jpg');
+    background-image: url('/static/images/The_River.jpg');
     background-size: contain;
     background-position: left bottom;
     background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 ::root {
-    --main-bg-color: #888888;
+    --main-bg-color: #0e131d;
     --main-font-color: #a19e98;
     --main-font-family: 'Lato', sans-serif;
 }
@@ -16,11 +16,6 @@ body {
     grid-row: span;
   }
   
-  h1 {
-    text-align: center;
-    color: #fff;
-  }
-  
   #calendar {
     display: grid;
     left: 0;
@@ -29,6 +24,18 @@ body {
     max-width: 90%;
     min-height: 450px;
     margin: 0 auto;
+    color: #fff;
+    padding-top: 50px;
+  }
+
+  .weekday:nth-child(7) {
+    grid-column: span 1;
+  }
+
+  .weekday {
+    padding: 10px;
+    text-align: center;
+    background-color: #0e131d; /* Change the weekday color to match the home page */
     color: #fff;
   }
   
@@ -46,6 +53,11 @@ body {
     background-color: #e74c3c;
   }
 
+  h2 {
+    text-align: left; /* Align the month to the left */
+    color: #fff;
+}
+
   .back-arrow {
     position: fixed;
     top: 20px;
@@ -55,7 +67,6 @@ body {
     background-color: #333;
     border-top: solid transparent;
     border-right: 50px solid #333;
-    transform: rotate(45deg);
     z-index: 100;
   }
 

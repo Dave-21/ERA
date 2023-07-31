@@ -1,15 +1,16 @@
+{% load static  %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Booking Calendar</title>
-        <link rel="stylesheet" type="text/css" href="booking_page_styles.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/booking_page_styles.css' %}">
     </head>
     <body>
-        <div class="back-arrow"></div>
+        <!--<div class="back-arrow"></div>-->
 
         <div class="content-grid">
             <div>
-                <h1>Booking Calendar</h1>
+                <div id="month" style="position: absolute; top: 0; left: 0;"></div>
                 <div id="calendar"></div>
             </div>
 
@@ -41,7 +42,7 @@
             </form>
             <button id="switchToSignin">Already have an account? Sign In</button>
         </div>
-
-        <script src="calendar_script.js"></script>
+        
+        <script src="{% static 'calendar_script.js' %}"></script>
     </body>
 </html>
